@@ -18,7 +18,7 @@ const FashionList = () => {
       setShoeData([]);
 
       const fetchData = async () => {
-        const response = await fetch(`https://dealsfinder-kevchong.onrender.com/fashion/${fashionQuery}`, {...options, body : JSON.stringify({body: "Posting"})});
+        const response = await fetch(`https://dealsfinder-backend.onrender.com/fashion/${fashionQuery}`, {...options, body : JSON.stringify({body: "Posting"})});
         
         if (response.ok){
           const data = await response.json();

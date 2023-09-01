@@ -18,7 +18,7 @@ const View = () => {
         setEmpty(false);
 
         const fetchData = async () => {
-            const response = await fetch(`https://dealsfinder-kevchong.onrender.com/houses/${houseQuery}`, { ...options, body : JSON.stringify({ post :"Posting"})});
+            const response = await fetch(`https://dealsfinder-backend.onrender.com/houses/${houseQuery}`, { ...options, body : JSON.stringify({ post :"Posting"})});
             
             if (response.ok){
                 const data = await response.json();

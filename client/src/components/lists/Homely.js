@@ -10,7 +10,7 @@ const Homely = () => {
 
     useEffect(() => {
         const fetchHouses = async () => {
-            const response = await fetch('https://dealsfinder-kevchong.onrender.com/home');
+            const response = await fetch('https://dealsfinder-backend.onrender.com/home');
 
             if (response.ok){
                 const data = await response.json();
