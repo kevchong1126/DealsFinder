@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import styles from './FashionList.module.scss';
 import { useParams } from 'react-router-dom';
-import {options} from '../../data/fetchParam';
 import {sortShoes} from '../../util/sortProducts';
 
 import NmShoeCards from '../cards/NmShoeCards';
@@ -18,7 +17,7 @@ const FashionList = () => {
       setShoeData([]);
 
       const fetchData = async () => {
-        const response = await fetch(`https://dealsfinder-backend.onrender.com/fashion/${fashionQuery}`, {...options, body : JSON.stringify({body: "Posting"})});
+        const response = await fetch(`https://dealsfinder-backend.onrender.com/fashion/${fashionQuery}`);
         
         if (response.ok){
           const data = await response.json();

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import styles from './View.module.scss';
 import {useParams} from 'react-router-dom';
-import {options} from '../../data/fetchParam';
 
 import MnHouseCards from '../cards/MnHouseCards';
 import MnHouseSkeletons from '../skeleton/MnHouseSkeletons';
@@ -18,7 +17,7 @@ const View = () => {
         setEmpty(false);
 
         const fetchData = async () => {
-            const response = await fetch(`https://dealsfinder-backend.onrender.com/houses/${houseQuery}`, { ...options, body : JSON.stringify({ post :"Posting"})});
+            const response = await fetch(`https://dealsfinder-backend.onrender.com/houses/${houseQuery}`);
             
             if (response.ok){
                 const data = await response.json();

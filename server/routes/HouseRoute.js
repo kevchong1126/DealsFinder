@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const getView = require('../cheerio/getView');
 
-router.post('/:houseQuery', (req, res) => {
+router.get('/:houseQuery', (req, res) => {
     
     const query = req.params.houseQuery.toLowerCase();
 

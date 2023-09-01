@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const getCar = require('../cheerio/getCar');
 
-router.post('/:carQuery', (req, res) => {
+router.get('/:carQuery', (req, res) => {
     const [make, model] = req.params.carQuery.toLowerCase().split('-');
     
     const getCars = async () => {

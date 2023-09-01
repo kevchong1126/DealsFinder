@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import styles from  './CarList.module.scss';
 import { useParams } from 'react-router-dom';
-import {options} from '../../data/fetchParam';
 
 import MnCarCards from '../cards/MnCarCards';
 import MnCarSkeletons from '../skeleton/MnCarSkeletons';
@@ -18,12 +17,12 @@ const CarList = () => {
         setEmpty(false);
 
         const fetchData = async () => {
-            const response = await fetch(`https://dealsfinder-backend.onrender.com/cars/${carQuery}`, {...options, body : JSON.stringify({body : "Posting"})});
+            const response = await fetch(`https://dealsfinder-backend.onrender.com/cars/${carQuery}`);
 
             if (response.ok){
                 const data = await response.json();
 
-                if (data.data.length){
+                if (Array.isArray(data.data) && data.data.length){
                     setCarData(data.data);
                     
                 }else{

@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const getShoeGrab = require('../cheerio/getShoeGrab');
 
-router.post('/:fashionQuery', (req, res) => {
+router.get('/:fashionQuery', (req, res) => {
 
     const query = req.params.fashionQuery.toLowerCase().split('-').join('+');
 
