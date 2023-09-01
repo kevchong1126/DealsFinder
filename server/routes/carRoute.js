@@ -7,7 +7,7 @@ router.get('/:carQuery', (req, res) => {
     
     const getCars = async () => {
         const data = await getCar(`https://www.carsales.com.au/cars/${make}/${model}/?sort=~Price`);
-
+        
         res.json({data})
     }
 
