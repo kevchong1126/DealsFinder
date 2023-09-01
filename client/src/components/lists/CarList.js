@@ -21,7 +21,7 @@ const CarList = () => {
 
             if (response.ok){
                 const data = await response.json();
-
+                console.log(data.data);
                 if (Array.isArray(data.data) && data.data.length){
                     setCarData(data.data);
                     
