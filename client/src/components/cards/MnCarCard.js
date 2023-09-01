@@ -2,7 +2,7 @@ import React from 'react'
 import styles from './MnCarCard.module.scss';
 
 const MnCarCard = ({data}) => {
-    const { link, image, title, price, odometer, body, transmission, engine, location } = data;
+    const { link, image, title, price, odometer, state, location } = data;
 
   return (
     <div className={styles.container}>
@@ -18,9 +18,7 @@ const MnCarCard = ({data}) => {
                     </h3>
                     <ul className={styles.features}>
                         <li className={styles.item}>.{odometer}</li>
-                        <li className={styles.item}>.{body}</li>
-                        <li className={styles.item}>.{transmission}</li>
-                        <li className={styles.item}>.{engine}</li>
+                        <li className={styles.item}>.{state}</li>
                     </ul>
                 </div>
                 <div className={styles.right}>

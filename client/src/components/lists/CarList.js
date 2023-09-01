@@ -16,12 +16,12 @@ const CarList = () => {
         setCarData([]);
         setEmpty(false);
 
-        const fetchData = async () => {//https://dealsfinder-backend.onrender.com
-            const response = await fetch(`/cars/${carQuery}`);
+        const fetchData = async () => {
+            const response = await fetch(`https://dealsfinder-backend.onrender.com/cars/${carQuery}`);
 
             if (response.ok){
                 const data = await response.json();
-                console.log(data);
+                console.log(data.data);
                 if (Array.isArray(data.data) && data.data.length){
                     setCarData(data.data);
                     

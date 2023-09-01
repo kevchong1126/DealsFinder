@@ -24,20 +24,19 @@ const getCar = async (url) => {
         const $ = cheerio.load(data);
         const arr = [];
 
-        $('.listing-item').each((idx, el) => {
-            const link = 'https://www.carsales.com.au' + $(el).find('.carousel.slide').attr('href');
-            const image = $(el).find('.d-block.w-100').attr('src');
-            const title = $(el).find('.col h3').text();
-            const price = $(el).find('.price a').text();
-            const odometer = $(el).find('.key-details__value:nth-child(1)').text();
-            const body = $(el).find('.key-details__value:nth-child(2)').text();
-            const transmission = $(el).find('.key-details__value:nth-child(3)').text();
-            const engine = $(el).find('.key-details__value:nth-child(4)').text();
-            const location = $(el).find('.seller-location').text();
-            arr.push({link, image, title, price, odometer, body, transmission, engine, location})
+        $('.carListing').each((idx, el) => {
+            const link = 'https://www.carsguide.com.au' + $(el).attr('href');
+            const image = $(el).find('.carListing--image').attr('src');
+            const title = $(el).find('.carListing--title').text();
+            const price = $(el).find('.carListingPrice--advertisedPrice').text();
+            const odometer = $(el).find('.carListing--mileage').text();
+            const state = $(el).find('.carListing--adType').text();
+            const location = $(el).find('.carListing--location').text();
+            arr.push({link, image, title, price, odometer, state, location})
         });
 
         return arr
+        
     }
     catch (err){
         console.log(err.message)
