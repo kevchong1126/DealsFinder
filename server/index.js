@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const cors = require('cors');
 const PORT = 5000;
 
 const houseRoute = require('./routes/HouseRoute');
@@ -7,6 +8,8 @@ const homelyRoute = require('./routes/HomelyRoute');
 const shoeGrabRoute = require('./routes/shoeGrabRoute');
 const fashionRoute = require('./routes/FashionRoute');
 const carRoute = require('./routes/carRoute');
+
+app.use(cors());
 
 app.use(express.json());
 
