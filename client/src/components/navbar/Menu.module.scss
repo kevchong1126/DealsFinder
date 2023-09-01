@@ -1,0 +1,19 @@
+@use '../../scss/variables' as *;
+@use '../../scss/mixins' as *;
+
+.menu{
+    display: flex;
+    gap: $mg-nm-1;
+
+    .item{
+        font-size: $txt-sm-4;
+        color: $gray-5;
+        font-weight: 500;
+
+        @include transition;
+
+        &:hover{
+            color: $black;
+        }
+    }
+}

@@ -1,0 +1,19 @@
+@use '../../scss/mixins' as *;
+@use '../../scss/variables' as *;
+
+.container{
+    @include container;
+
+    .content{
+        margin-top: $mg-lg-2;
+
+        .title{
+            font-weight: 500;
+            margin-block: $mg-nm-2;
+            
+            span{
+                font-weight: 700;
+            }
+        }
+    }
+}

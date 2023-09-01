@@ -1,0 +1,26 @@
+@use '../../scss//variables' as *;
+@use '../../scss//mixins' as *;
+
+.container{
+    @include container;
+    margin-top: $mg-lg-4;
+    margin-bottom: $mg-lg-2;
+    
+    .content{
+        @include content;
+
+        .header{
+            font-weight: 700;
+            font-size: $txt-lg-2;
+            max-width: 40%;
+            padding-bottom: $pd-nm-4;
+        }
+
+        .link{
+            color: $blue-4;
+            font-weight: 700;
+            font-size: $txt-nm-1;
+            margin-top: $mg-nm-2;
+        }
+    }
+}

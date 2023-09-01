@@ -1,0 +1,12 @@
+@use '../scss/variables' as *;
+@use '../scss/mixins' as *;
+
+.container{
+    @include container;
+    padding-top: 73px;
+    background-color: $gray-1;
+
+    .content{
+        @include content;
+    }
+}

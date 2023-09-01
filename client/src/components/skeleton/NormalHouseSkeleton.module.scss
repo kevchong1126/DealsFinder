@@ -1,0 +1,68 @@
+@use '../../scss/variables' as *;
+@use '../../scss/mixins' as *;
+
+.container{
+    width: 100%;
+    height: 320px;;
+    border-radius: 0.5rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 6px 0px;
+    overflow: hidden;
+    background-color: $white;
+    
+    .content{
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+}
+
+.imgContainer{
+    width: 100%;
+    height: 60%;
+    animation: bg 0.5s linear infinite alternate;
+}
+
+.contentInfo{
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: $pd-sm-4 $pd-sm-4 $pd-sm-3 $pd-sm-4;
+    color: $gray-5;
+
+    .price{
+        width: 50%;
+        height: 1.5rem;
+        animation: bg 0.5s linear infinite alternate;
+    }
+
+    .location{
+        width: 70%;
+        height: 1rem;
+        animation: bg 0.5s linear infinite alternate;
+    }
+
+    .misc{
+        display: flex;
+        gap: 0.8rem;
+
+        .item{
+            display: flex;
+            gap: 0.2rem;
+            align-items: center;
+            width: 3rem;
+            height: 1.3rem;
+            
+            animation: bg 0.5s linear infinite alternate;
+        }
+    }
+}
+
+@keyframes bg{
+    0%{
+        background-color: $gray-2;
+    }
+    100%{
+        background-color: $gray-4;
+    }
+}

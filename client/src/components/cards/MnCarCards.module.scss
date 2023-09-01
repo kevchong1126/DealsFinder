@@ -1,0 +1,13 @@
+@use '../../scss//variables' as *;
+@use '../../scss//mixins' as *;
+
+.container{
+    @include container;
+
+    .content{
+        @include container;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+}

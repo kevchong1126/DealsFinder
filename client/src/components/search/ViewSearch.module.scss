@@ -1,0 +1,69 @@
+@use '../../scss/variables' as *;
+@use '../../scss/mixins' as *;
+
+.container{
+    min-height: 300px;
+    height: 540px;
+    flex-basis: 350px;
+    position: sticky;
+    top: 101px;
+
+    .content{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-radius: 0.4rem;
+        padding: $pd-sm-4 $pd-sm-2 ;
+        box-shadow: 1px 2px 10px 0px rgba($color: #000000, $alpha: 0.1);
+    }
+}
+
+
+.form{
+    width: 100%;
+    height: 10%;
+    border: none;
+
+    .input{
+        width: 100%;
+        height: 100%;
+        border: 1px solid $blue-3;
+        border-radius: 1rem;
+        padding: $pd-sm-2 $pd-sm-4;
+        outline: none;
+    }
+}
+
+
+.locationList{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 90%;
+    overflow-y: auto;
+    margin-top: $mg-sm-2;
+
+    &::-webkit-scrollbar{
+        width: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb{
+       background-color: $gray-2;
+       border-radius: 0.5rem;
+    }
+
+    .location{
+        cursor: pointer;
+        border-bottom: 1px solid $blue-3;
+        padding: $pd-sm-3 $pd-sm-4;
+        width: 90%;
+        color: $black;
+        @include transition($duration:0.15s);
+        
+        &:hover{
+            background-color: $gray-1;
+        }
+    }
+}

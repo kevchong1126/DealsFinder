@@ -1,0 +1,48 @@
+
+$sizes : (
+    'xs' : 480px,
+    'sm' : 768px,
+    'nm' : 1024px,
+    'lg' : 1280px,
+    'xl' : 1680px
+);
+
+@mixin xs-screen{
+    @media (max-width: map-get($sizes, 'xs')){
+        @content;
+    }
+}
+
+@mixin sm-screen{
+    @media (max-width: map-get($sizes, 'sm')){
+        @content;
+    }
+}
+@mixin nm-screen{
+    @media (max-width: map-get($sizes, 'nm')){
+        @content;
+    }
+}
+@mixin lg-screen{
+    @media (max-width: map-get($sizes, 'lg')){
+        @content;
+    }
+}
+
+@mixin xl-screen{
+    @media (max-width: map-get($sizes, 'xl')){
+        @content;
+    }
+}
+
+@mixin minBreakpoint($breakpoint: 480px){
+    @media (min-width: $breakpoint){
+        @content;
+    }
+}
+
+@mixin maxBreakpoint($breakpoint: 2000px){
+    @media (max-width: $breakpoint){
+        @content;
+    }
+}

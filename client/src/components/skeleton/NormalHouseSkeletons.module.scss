@@ -1,0 +1,12 @@
+@use '../../scss/variables' as *;
+@use '../../scss/mixins' as *;
+
+.container{
+    @include container;
+
+    .content{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax( 250px, 1fr));
+        gap: 1rem;
+    }
+}

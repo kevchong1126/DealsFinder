@@ -1,0 +1,24 @@
+@use '../../scss//mixins' as *;
+@use '../../scss//variables' as *;
+
+.container{
+    @include container;
+
+    .content{
+        @include content;
+        max-width: 800px;
+        padding-top: $pd-nm-1;
+        .form{
+            width: 100%;
+            border: none;
+
+            .input{
+                width: 100%;
+                padding: $pd-nm-1 $pd-nm-4;
+                border: 1px solid $gray-2;
+                outline: none;
+                font-size: $txt-nm-1;
+            }
+        }
+    }
+}

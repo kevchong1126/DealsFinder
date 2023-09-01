@@ -1,0 +1,27 @@
+@use '../../scss/variables' as *;
+@use '../../scss/mixins' as *;
+
+.container{
+    @include container;
+    
+
+    .content{
+        @include content;
+        background: linear-gradient(45deg, $blue-4 20%, $blue-3 50%, $blue-4 80%);
+        border-radius: 0.5rem;
+        padding-block: $pd-nm-2;
+
+        .text1{
+            font-size: $txt-lg-4;
+            font-weight: 700;
+            color: $white;
+            text-align: center;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .text2{
+            @extend .text1;
+            font-size: $txt-nm-4;
+        }
+    }
+}

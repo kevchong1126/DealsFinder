@@ -1,0 +1,12 @@
+@use '../scss/mixins' as *;
+@use '../scss/variables' as *;
+
+.container{
+    @include container;
+    margin-top: 73px;
+
+    .content{
+        @include content;
+        
+    }
+}

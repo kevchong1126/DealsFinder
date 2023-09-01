@@ -1,0 +1,8 @@
+@use '../../scss/variables' as *;
+
+.title{
+    font-size: $txt-lg-1;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: $gray-5;
+}

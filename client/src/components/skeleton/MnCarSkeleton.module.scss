@@ -1,0 +1,83 @@
+@use '../../scss/mixins' as *;
+@use '../../scss/variables' as *;
+
+.container{
+    @include container;
+    
+    .content{
+        width: 100%;
+        max-width: 700px;
+        height: 500px;
+        border-radius: 0.2rem;
+        overflow: hidden;
+        background-color: $white;
+        box-shadow: 1px 4px 5px 0px rgba($color: #000000, $alpha: 0.1);
+    }
+}
+
+.imgContainer{
+    width: 100%;
+    height: 65%;
+    animation: bg 0.5s linear infinite alternate;
+}
+
+.body{
+    height: 35%;
+    display: flex;
+    padding: $pd-sm-3 $pd-nm-1;
+    
+
+    .left{
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        .title{
+            width: 100%;
+            height: 2.5rem;
+            animation: bg 0.5s linear infinite alternate;
+        }
+
+        .features{
+            padding-top: $pd-sm-2;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.5rem;
+            
+            .item{
+                width: 80%;
+                height: 1rem;
+                animation: bg 0.5s linear infinite alternate;
+            }
+        }
+    }
+
+    .right{
+        width: 40%;
+        @include centerFlex;
+        flex-direction: column;
+        gap: 0.5rem;
+
+        .price{
+            width: 30%;
+            height: 1.5rem;
+            animation: bg 0.5s linear infinite alternate;
+        }
+
+        .location{
+            width: 30%;
+            height: 1rem;
+            animation: bg 0.5s linear infinite alternate;
+        }
+    }
+}
+
+@keyframes bg{
+    0%{
+        background-color: $gray-2;
+    }
+    100%{
+        background-color: $gray-4;
+    }
+}

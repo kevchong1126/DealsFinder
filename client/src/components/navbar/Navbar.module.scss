@@ -1,0 +1,37 @@
+@use '../../scss/variables' as *;
+@use '../../scss/mixins' as *;
+
+.container{
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgba($color: $white, $alpha: 1);
+    box-shadow: 0 2px 5px 0px rgba($color: #000000, $alpha: 0.1);
+    z-index: 99;
+    
+    border: none;
+    .content{
+        @include content;
+        position: relative;
+        width: 95%;
+        max-width: 1700px;
+        padding-block: $pd-sm-4;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: $mg-nm-4;
+
+        .author{
+            position: absolute;
+            display: inline-block;
+            color: $gray-5;
+            top: 50%;
+            right: 2rem;
+            font-size: $txt-sm-3;
+            transform: translateY(-50%);
+            padding-bottom: $pd-sm-1;
+            border-bottom: 1px solid $gray-5;
+        }
+    }
+}

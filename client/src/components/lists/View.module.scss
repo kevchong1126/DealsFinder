@@ -1,0 +1,30 @@
+@use '../../scss/variables' as *;
+@use '../../scss/mixins' as *;
+
+.container{
+    @include container;
+    min-height: 500px;
+    padding-bottom: $pd-nm-2;
+
+    .content{
+        width: 100%;
+        height: 100%;
+        padding-inline: $pd-sm-4;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.info{
+    width: 100%;
+
+    .title{
+        font-size: $txt-lg-2;
+    
+        .titleLocation{
+            text-transform: uppercase;
+            text-decoration: underline;
+            padding-inline: $pd-sm-4;
+        }
+    }
+}

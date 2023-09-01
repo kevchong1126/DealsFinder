@@ -1,0 +1,83 @@
+@use '../../scss/variables' as *;
+@use '../../scss/mixins' as *;
+
+.container{
+    width: 100%;
+    height: 100vh;
+    min-height: 600px;
+    position: relative;
+    background-image: url('../../img/bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0% 20%;
+    color: $white;
+
+    .overlay{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($color: rgb(34, 33, 33), $alpha: 0.5);
+    }
+
+    .content{
+        @include content;
+        position: relative;
+        display: flex;
+        align-items: center;
+        z-index: 1;
+    }
+}
+
+.left{
+    width: 100%;
+
+    .title{
+        font-size: $txt-rs-4;
+        font-weight: bolder;
+        text-transform: capitalize;
+    }
+    
+    .desc{
+        margin-top: $mg-sm-4;
+        font-weight: bold;
+        text-transform: capitalize;
+    }
+}
+
+.right{
+    width: 100%;
+
+    .optionsContainer{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-block: $pd-nm-1;
+
+        .options{
+            margin-block: $mg-sm-2;
+            text-transform: capitalize;
+        }
+
+        .links{
+            display: flex;
+            gap: 1rem;
+
+            .link{
+                //background-color: $white;
+                color: $white;
+                font-weight: 700;
+                padding: $pd-sm-2 $pd-sm-4;
+                border: 2px solid $gray-3;
+                border-radius: 0.3rem;
+                @include transition($duration: 0.2s);
+
+                &:hover{
+                    border-color: $white;
+                    color: $gray-5;
+                    background-color: $white;
+                }
+            }
+        }
+    }
+}

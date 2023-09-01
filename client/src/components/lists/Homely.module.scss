@@ -1,0 +1,27 @@
+@use '../../scss/variables' as *;
+@use '../../scss/mixins' as *;
+
+.container{
+    @include container;
+
+    .content{
+        @include content;
+        padding-block: $pd-lg-4;
+
+        .header{
+            font-size: $txt-lg-1;
+            font-weight: 700;
+            max-width: 35%;
+            text-transform: capitalize;
+            font-family: monospace;
+            padding-block: $pd-nm-4;
+        }
+
+        .link{
+            color: $blue-4;
+            font-weight: 700;
+            font-size: $txt-nm-1;
+            margin-top: $mg-nm-3;
+        }
+    }
+}
