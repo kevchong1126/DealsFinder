@@ -11,7 +11,7 @@ const Navbar = () => {
         <Logo />
         <Menu />
         <a className={styles.author} href='https://www.linkedin.com/in/kevin-chong-ng-49478526a/' target='_blank'>
-          DEVELOPED BY KEVIN CHONG
+          
         </a>
       </div>
       
