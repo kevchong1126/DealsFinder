@@ -4,7 +4,8 @@
 .menu{
     display: flex;
     gap: $mg-nm-1;
-
+    margin-left: 15rem;
+    
     .item{
         font-size: $txt-sm-4;
         color: $gray-5;
